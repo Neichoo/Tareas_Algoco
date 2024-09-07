@@ -305,19 +305,10 @@ int main() {
     using chrono::duration_cast;
     using chrono::duration;
     using chrono::milliseconds;
-
     auto t1 = high_resolution_clock::now();
     lld** result = Strassen(mat1, mat2, f1, c1, c2);
     auto t2 = high_resolution_clock::now();
     duration<double, milli> ms_double = t2 - t1;
-
-    cout << "Strassen multiplication result:\n";
-    for(int i = 0; i < f1; i++) {
-        for(int j = 0; j < c2; j++) {
-            cout << result[i][j] << "\t";
-        }
-        cout << endl;
-    }
     cout << ms_double.count() << " ms\n";
     for(int i = 0; i < f1; i++) delete[] mat1[i];
     delete[] mat1;
