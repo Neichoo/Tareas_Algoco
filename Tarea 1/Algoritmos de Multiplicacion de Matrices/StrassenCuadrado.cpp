@@ -7,7 +7,6 @@
 #include <chrono>
 using namespace std;
 using namespace chrono;
-using namespace std;
 typedef long long lld;
 
 //Umbral para cambiar a multiplicación tradicional
